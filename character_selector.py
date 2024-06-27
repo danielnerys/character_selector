@@ -40,7 +40,7 @@ def menu():
                 typing_animation(f" • {atribute.capitalize()}: {value}", delay_default)
 
     show_details(characters)
-    typing_animation("Escolha uma das classes: ", delay_default)
+    typing_animation(f"{"-" * 8}Escolha uma das classes citadas acima{"-" * 10}", delay_default)
     options = ["Guerreiro", "Arqueiro", "Mago"]
     options_lower = [option.lower() for option in options]
 
@@ -49,8 +49,12 @@ def menu():
         if input_class:
             if input_class in options_lower:
                 print(
-                    "Sua classe selecionada foi ",
+                    "Você escolheu a classe: ",
                     Fore.YELLOW + input_class.capitalize() + "!",
+                )
+                print(
+                    "Espero que esteja satisfeito com sua escolha! Até a proxima meu querido",
+                    Fore.YELLOW + input_class.capitalize() + ".",
                 )
                 break
             else:
@@ -62,5 +66,3 @@ def menu():
 
 
 menu()
-
-print("fim do codigo")
